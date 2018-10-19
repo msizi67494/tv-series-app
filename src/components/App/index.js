@@ -1,22 +1,10 @@
 import React, { Component } from 'react';
 import Intro from '../Intro/index';
+import 'whatwg-fetch';
+import Main from '../../components/main/index';
 import './App.css';
 
 class App extends Component {
-
-  state = {
-    series: []
-  }
-
-  componentDidMount(){
-
-    const series = ["Ballers","Power"];
-    
-    setTimeout(() => {
-      this.setState({series: series});
-    }, 2000);
-
-  }
 
   render() {
     return (
@@ -25,7 +13,8 @@ class App extends Component {
           <p> TV Series List </p>
         </header>
         <Intro message="Here you can find all your loved series"/>
-        the length of the array {this.state.series.length}
+        
+        <Main />
       </div>
     );
   }
